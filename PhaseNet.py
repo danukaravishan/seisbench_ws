@@ -1,3 +1,5 @@
+#This script needs to be developed to get input from hdf5 database
+
 import obspy
 import seisbench
 import seisbench.models as sbm
