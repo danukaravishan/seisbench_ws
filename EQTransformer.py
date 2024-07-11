@@ -7,7 +7,6 @@ from obspy import UTCDateTime
 import matplotlib.pyplot as plt
 
 
-
 def data():
     #client = Client("GFZ")
     #t = UTCDateTime("2007/01/01 05:48:50")
@@ -29,6 +28,8 @@ def main():
     stream = data()
 
     chunked_stream = stream.split(10)
+
+    # Add a function to append the data into single stream
 
     for i in range(3):
         ax.plot(stream[i].times(), stream[i].data, label=stream[i].stats.channel)

@@ -1,3 +1,5 @@
+# This is test script to download geonet data
+
 from obspy.clients.fdsn import Client
 from obspy import UTCDateTime
 import matplotlib.pyplot as plt
@@ -15,7 +17,9 @@ stream = client.get_waveforms(network="NZ", station="WEL", location="*", channel
 # Plot the waveform data
 fig = plt.figure(figsize=(15, 5))
 ax = fig.add_subplot(111)
+
 for tr in stream:
     ax.plot(tr.times(), tr.data, label=tr.stats.channel)
+
 ax.legend()
 plt.show()
