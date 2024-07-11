@@ -1,3 +1,4 @@
 EQtranformer_original.json
 *.json
 *.pt
+bin/
